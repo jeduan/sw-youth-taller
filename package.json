@@ -1,6 +1,17 @@
 {
   "name": "swyouth-demo",
+  "private": true,
   "dependencies": {
     "http-server": "^0.8.0"
+  },
+  "scripts": {
+    "start": "http-server .",
+    "watch": "gulp watch"
+  },
+  "devDependencies": {
+    "autoprefixer-core": "^5.2.1",
+    "gulp": "^3.9.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-postcss": "^5.1.9"
   }
 }
