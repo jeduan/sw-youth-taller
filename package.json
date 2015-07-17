@@ -1,4 +1,5 @@
 {
+  "name": "swyouth-demo",
   "dependencies": {
     "http-server": "^0.8.0"
   }
