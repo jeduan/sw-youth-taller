@@ -1,7 +1,7 @@
 var gulp = require('gulp')
 var postcss = require('gulp-postcss')
 var autoprefixer = require('autoprefixer-core')
-var livereload = require('gulp-livereload')
+var connect = require('gulp-connect')
 
 gulp.task('css', function () {
   return gulp.src('src/*.css')
@@ -14,10 +14,24 @@ gulp.task('css', function () {
       })
     ]))
     .pipe(gulp.dest('./dist'))
-    .pipe(livereload())
+    .pipe(connect.reload())
 })
 
-gulp.task('watch', function () {
-  livereload.listen()
-  gulp.watch('src/*.css', ['css'])
+gulp.task('serve', function () {
+  connect.server({
+    livereload: true
+  })
 })
+
+gulp.task('reload', function () {
+  connect.reload()
+})
+
+gulp.task('watch', ['css'], function () {
+  gulp.watch('src/*.css', ['css'])
+  gulp.watch('index.html', ['reload'])
+})
+
+gulp.task('build', ['css'])
+
+gulp.task('default', ['serve', 'watch'])
