@@ -1,21 +1,7 @@
 var gulp = require('gulp')
-var postcss = require('gulp-postcss')
-var autoprefixer = require('autoprefixer-core')
 var connect = require('gulp-connect')
-
-gulp.task('css', function () {
-  return gulp.src('src/*.css')
-    .pipe(postcss([
-      autoprefixer({
-        browsers: [
-          'last 2 iOS versions',
-          'last 4 Android versions'
-        ]
-      })
-    ]))
-    .pipe(gulp.dest('./dist'))
-    .pipe(connect.reload())
-})
+var log = require('gulp-util').log
+var path = require('path')
 
 gulp.task('serve', function () {
   connect.server({
@@ -23,15 +9,11 @@ gulp.task('serve', function () {
   })
 })
 
-gulp.task('reload', function () {
-  connect.reload()
+gulp.task('watch', function () {
+  gulp.watch(['index.html', 'main.css'], function (event) {
+    log('Reloading', path.basename(event.path))
+    gulp.src(event.path).pipe(connect.reload())
+  })
 })
-
-gulp.task('watch', ['css'], function () {
-  gulp.watch('src/*.css', ['css'])
-  gulp.watch('index.html', ['reload'])
-})
-
-gulp.task('build', ['css'])
 
 gulp.task('default', ['serve', 'watch'])
