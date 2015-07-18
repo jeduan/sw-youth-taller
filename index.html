@@ -5,23 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" type="text/css" > -->
-    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/flexboxgrid/6.2.0/flexboxgrid.min.css" type="text/css" > -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="dist/ios.css">
-    <link rel="stylesheet" href="dist/main.css">
+    <!-- http://bootflat.github.io/documentation.html -->
+    <link rel="stylesheet" href="node_modules/bootflat/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootflat/css/site.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic">
+    <link rel="stylesheet" href="main.css">
   </head>
-  <body>
-    <header>
-      <h1 class="company-name">Startup</h1>
-      <h2 class="description">Do awesome things</h2>
-      <button>Regístrate</button>
-    </header>
-    <section class="row">
 
-    </section>
+  <body><!-- el cuerpo del sitio -->
+    <header>
+      <div class="jumbotron">
+        <div class="jumbotron-photo">
+          <img src="https://farm1.staticflickr.com/397/19151456924_7a828e8ab9_b.jpg" alt="Brothers">
+        </div>
+        <div class="jumbotron-contents">
+          <h1>Instardecer</h1>
+          <h2>Atardeceres hasta la puerta de tu casa</h2>
+          <p>A veces ver el atardecer es engorroso. Con nuestra app nunca más tienes que perderte la puesta de sol</p>
+          <p>Registrate ya y obtén tu primer atardecer gratis</p>
+          <button type="button" class="btn btn-block btn-primary">Ir al registro</button>
+        </div>
+      </div><!-- termina jumbotron -->
+    </header>
+    <section class="features">
+      <div class="alert alert-success">
+        <h4>El crepúsculo, hasta tu puerta</h4>
+        <p>Simplemente selecciona el dia desde nuestra app y te lo llevamos</p>
+      </div>
+      <div class="alert alert-success">
+        <h4>Seguro</h4>
+        <p>Elige con quién compartir la caída de la tarde.</p>
+      </div>
+      <div class="alert alert-success">
+        <h4>Confiable</h4>
+        <p>Con nuestra garantía, si el sol no se pone el día que seleccionaste, te regresamos tu dinero.</p>
+      </div>
+    </section><!-- termina features -->
+    <section class="registro">
+      <h2>Registro</h2>
+      <form>
+        <input name="nombre" type="text" class="form-control" placeholder="Juan Perez">
+        <input type="email" name="email" class="form-control" placeholder="juan@micorreo.mx">
+        <button class="btn btn-block btn-primary">Registrarse</button>
+      </form>
+    </section><!-- termina registro -->
+    <script type="text/javascript" src="node_modules/bootflat/js/site.min.js"></script>
   </body>
 </html>

@@ -1,0 +1,50 @@
+h1, h2 {
+  margin: 0;
+}
+
+.jumbotron {
+  padding: 0;
+  margin: 0;
+}
+.jumbotron-photo img {
+  max-width: 100%;
+}
+
+.jumbotron-contents {
+  padding: 20px;
+  color: #434a54;
+}
+
+.jumbotron .h1, .jumbotron .h2, .jumbotron h1, .jumbotron h2 {
+    font-weight: 400
+}
+
+.jumbotron .h1, .jumbotron h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.jumbotron .h2, .jumbotron h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.jumbotron p {
+    font-size: 14px
+}
+
+section.registro {
+  height: 100vh;
+  padding: 10px 20px 10px;
+  background: #4fc1e9;
+  color: white;
+}
+
+.registro h2 {
+  margin-bottom: 20px;
+}
+
+input.form-control {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
